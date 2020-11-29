@@ -1,0 +1,15 @@
+{% extends 'polls/layout.html' %}
+{% block body %}
+
+    <h1 class="heading-1 align-center">Add Question</h1>
+    <form action="{% url 'polls:addPoll' %}" method="POST">
+        {%csrf_token%}
+        {{q_form}}
+        <br>
+        {{c_form}}
+        <input type="submit" name="submit" id="submit" value="Create">
+    </form>
+    <h1 class="heading-1 align-center">Choices</h1>
+
+    
+{% endblock %}

@@ -8,8 +8,8 @@
         <p class="lead">
 {{question}}
         </p>
-        <a href="{% url 'polls:details' question.id %}" class="btn btn-primary btn-sm">Vote Now</a>
-        <a href="{% url 'polls:results' question.id %}" class="btn btn-secondary btn-sm">Results</a>
+        <a href="{% url 'polls:details' question.link %}" class="btn btn-primary btn-sm">Vote Now</a>
+        <a href="{% url 'polls:results' question.link %}" class="btn btn-secondary btn-sm">Results</a>
     </div>
 </div> 
 {% empty %}

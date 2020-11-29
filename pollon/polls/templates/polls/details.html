@@ -1,6 +1,6 @@
 {% extends 'polls/layout.html' %}
 {% block body %}
-<form action="{% url 'polls:vote' question.id %}" method="post">
+<form action="{% url 'polls:vote' question.link %}" method="post">
     {% csrf_token %}
     {% for choice in question.choice_set.all %}
         <div class="form-check">
