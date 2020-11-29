@@ -1,6 +1,14 @@
 {% extends 'polls/layout.html' %}
 {% block body %}
+
 <form action="{% url 'polls:vote' question.link %}" method="post">
+    <p class="lead" style="font-weight: 600;">
+        {{question}}
+</p>
+<br>
+<br>
+<br>
+<br>
     {% csrf_token %}
     {% for choice in question.choice_set.all %}
         <div class="form-check">

@@ -89,7 +89,7 @@ def addPoll(request):
                 ch.save()
             print(q_form.cleaned_data)
             q_form.save()
-        return HttpResponse("SUBMITTED.")
+        return HttpResponseRedirect(reverse('polls:index'))
     else:
         c_form = Get_Choices(prefix="choice")
         q_form = Get_Question(prefix='question')

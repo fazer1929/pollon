@@ -1,7 +1,7 @@
 {% extends 'polls/layout.html' %}
 
 {% block body %}
-<ht class="text-center">Polls Questions</ht>
+<h1 class="display-4">Active Polls</h1>
 {% for question in latest_question %}
 <div class="card mb-3">
     <div class="card-body">
@@ -15,4 +15,7 @@
 {% empty %}
     NO POLLS
 {% endfor %}
+
+<br>
+<a class="btn btn-primary btn-lg" href="{% url 'polls:addPoll' %}"> Add A Poll </a>
 {% endblock %}
